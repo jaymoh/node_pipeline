@@ -4,6 +4,7 @@
   "description": "A simple node express mocha chai test app",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "mocha"
   },
   "repository": {
