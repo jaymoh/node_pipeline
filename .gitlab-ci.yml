@@ -19,5 +19,5 @@ install_dependencies:
 test_with_mocha:
   stage: test
   script:
-    - npm start&
+    - npm start
     - npm test

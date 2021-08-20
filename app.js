@@ -14,7 +14,11 @@ app.get('/about', function (req, res) {
   res.send(`<h3>About page is so cool</h3>`)
 })
 
-// Launch listening server on a port
-app.listen(port, function () {
-  console.log('App listening on port ' + port)
-})
+if (process.env.NODE_ENV === 'test') {
+  module.exports = app
+} else {
+  // Launch listening server on a port
+  app.listen(port, function () {
+    console.log('App listening on port ' + port)
+  })
+}

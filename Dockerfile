@@ -1,6 +1,5 @@
-
 FROM node:latest
-WORKDIR /usr/src/node_pipeline
+WORKDIR /var/www/node_pipeline
 
 # copy package.json and package-lock.json and install packages. 
 # This is done outside of the application source code to take advantage of docker's caching
@@ -14,4 +13,4 @@ COPY . .
 
 # expose port 8090 and start serving the app
 EXPOSE 8090
-CMD [ "npm", "start&" ]
+CMD [ "npm", "start" ]
